@@ -1,0 +1,15 @@
+{
+  "name": "librerias",
+  "version": "1.0.0",
+  "description": "\"Proyecto para trabajaer con las diferentes librerias que existen.\"",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "David",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "10_librerias",
+  "version": "1.0.0",
+  "description": "Ejercicio práctico para el uso de las libreria y exportacion de ellas",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "npm index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.0.1"
+  }
+}

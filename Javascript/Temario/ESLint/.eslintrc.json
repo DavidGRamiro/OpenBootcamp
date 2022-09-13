@@ -1,0 +1,13 @@
+//Archivo de configuracion de reglas ESLint
+// Es un archivo poco practivo para configurar las reglas ESLint.
+
+{
+    "rules": {
+        // Override our default settings just for this directory
+        "eqeqeq": "warn",
+        "strict": "off",
+        "quotes": ["error", "double"],
+        "semi": ["error", "never"],
+        "no-dupe-keys":"error"
+    }
+}

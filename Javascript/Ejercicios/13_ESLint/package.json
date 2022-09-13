@@ -1,0 +1,15 @@
+{
+  "name": "13_eslint",
+  "version": "1.0.0",
+  "description": "Ejercicio 13 ESLint",
+  "main": "index.js",
+  "scripts": {
+    "lint" : "eslint .",
+    "lint-fix": "eslint --fix ."
+  },
+  "author": "David González",
+  "license": "ISC",
+  "devDependencies": {
+    "eslint": "^8.23.1"
+  }
+}

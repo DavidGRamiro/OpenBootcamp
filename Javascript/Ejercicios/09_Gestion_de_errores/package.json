@@ -1,0 +1,14 @@
+{
+  "name": "09_gestion_de_errores",
+  "version": "1.0.0",
+  "description": "Ejercicio para trazar los errores en proyectos",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "David",
+  "license": "ISC",
+  "dependencies": {
+    "winston": "^3.8.1"
+  }
+}
