@@ -36,7 +36,7 @@ const array3 = [1,2,3,4,5];
 array3.splice(2,1) 
 console.log(array3); // 1,2,4,5
 
-//Añadir valores .splice(indice, 0 valores a eliminar, valores);
+//Añadir valores .splice(indice, 0 valores a eliminar, valores nuevos);
 array3.splice(2,0,"hola");
 console.log(array3); //[ 1, 2, 'hola', 4, 5 ]
 

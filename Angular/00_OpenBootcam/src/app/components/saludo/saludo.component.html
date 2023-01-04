@@ -1,0 +1,8 @@
+<h1>Hola {{ nombre }}</h1>
+
+<h3 ngClass ="saludo"  [innerText]="nombre">
+    <!--No indicamos nada, si no que el valor viene definido por la propiedad-->
+    <!-- [[innerText] Es como poner  {{ nombre }}-->
+</h3>
+
+<button (click)="enviarMensajePadre()">Enviar mensaje de componente hijo a componente padre</button>
