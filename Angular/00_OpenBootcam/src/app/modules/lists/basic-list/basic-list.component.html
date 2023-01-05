@@ -1,0 +1,67 @@
+
+<!-- BLOQUE DE DIRECTIVAS DE ATRIBUTOS -->
+
+<!-- ngStyle sirve para aplicar un estilo concreto -->
+<p [ngStyle]="{color:'tomato', fontWeight: 'bolder'}">Lista básica de elementos</p>
+
+<!-- Directiva de atributo para modificar la clase, en el CSS-->
+<p ngClass="underlined">Aqui vamos a tener que iterar sobre una lista y mostrar elementos.</p>
+
+<!-- Con esto, damos atributos a la clase, declarados en el CSS -->
+<p [ngClass]="['underlined','small']">Sin elementos en la lista</p>
+
+<!-- Podemos habilitar o deshabilitar estilos de las clases para renderizar. -->
+<p [ngClass]="{underlined : false,small:true}">Crea un elemento</p>
+
+
+<!-- BLOQUE DE DIRECTIVAS DE ESTRUCTURA -->
+
+<!-- ngIf sirve para mostrar o no mostrar un elemento -->
+<!-- <p *ngIf="cargandoElementos">Cargando...</p> -->
+
+<button (click)="cambiarCargando()">
+    <!-- Podemos evaluar el texto del botón con el evaluador ternario -->
+    {{ cargandoElementos ? 'Empezar carga' : 'Terminar carga' }}
+
+</button>
+
+<!-- Aqui podemos hacer un if Else utilizando el ngTemplate. SOlo se mostrara cuando sea llamado.-->
+<ng-container *ngIf="!cargandoElementos; else templateEspera">
+    <p>Todo listo!!</p>
+</ng-container>
+
+<ng-template #templateEspera>
+    <p>Cargando..</p>
+    <p>Espere a que termine el proceso</p>
+</ng-template>
+
+<!-- ngFor sirve para iterar sobre una lista -->
+<!-- Hacemos un div para cada uno de los elementos que iteramos y otro para aplicarle el estilo -->
+<!-- Con la variable index accedemos al indice del elemento. Con even, evaluamos si es par o inpar -->
+<!-- Hacemos un evaluador ternario en el div, para que dependiendo si es par, lo pinte de rojo. -->
+
+<div *ngFor="let producto of listaElementos; let i = index; let even = even">
+    <div [ngStyle]="even?{ backgroundColor: 'blue', color: 'white'}:{backgroundColor: 'red', color: 'white'}">
+        <p>ID : {{ i+1 }}</p>
+        <p>{{ producto.nombre }} - {{ producto.precio }}</p>
+        <p>{{ producto.descripcion }}</p>
+    </div>
+</div>
+
+<!-- ngSwitch muestra un contenido dependiendo del valor que evalue. -->
+
+<div [ngSwitch]="opcion">
+    <p [id] = '1' *ngSwitchCase="1">Has escogido la opcion 1</p>
+    <p [id] = '2' *ngSwitchCase="2">Has escogido la opcion 2</p>
+    <p [id] = '3' *ngSwitchCase="3">Has escogido la opción 3</p>
+    <p *ngSwitchDefault>Por defecto</p>
+</div>
+
+<div>
+    <input type = "radio" name = "opcion" (click)="escogerOpcion(1)">Opcion 1
+    <input type = "radio" name = "opcion" (click)="escogerOpcion(2)">Opcion 2
+    <input type = "radio" name = "opcion" (click)="escogerOpcion(3)">Opcion 3
+    <input type = "radio" name = "opcion" (click)="escogerOpcion(0)">Ocultar
+</div>
+
+
